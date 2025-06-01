@@ -44,10 +44,10 @@ public class ExpenseController {
     }
 
     @GetMapping("/editExpense/{id}")
-    public String showUpdateExpensePage(@PathVariable("id") Long id, Model model) {
+    public String showUpdateExpensePage(@PathVariable("id") long id, Model model) {
         Expense expense = expenseService.getExpenseById(id);
         model.addAttribute("expense", expense);
-        return "edit_expense";
+        return "update-expense";
     }
 
     @PostMapping("/updateExpense/{id}")
